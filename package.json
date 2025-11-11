@@ -1,0 +1,13 @@
+{
+  "name": "ebac-ui-exercicios",
+  "version": "1.0.0",
+  "description": "Exercícios EBAC - Suítes de teste para Loja EBAC",
+  "scripts": {
+    "test:criarConta": "cypress run --spec 'cypress/integration/criarConta/**/*.spec.js'",
+    "test:checkout": "cypress run --spec 'cypress/integration/checkout/**/*.spec.js'",
+    "test:all": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^13.0.0"
+  }
+}
