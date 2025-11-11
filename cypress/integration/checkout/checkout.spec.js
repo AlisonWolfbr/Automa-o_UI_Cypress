@@ -1,10 +1,14 @@
 import actions from '../../app_actions/CheckoutActions';
 
-describe('Fluxo de checkout carrinho de compras', () => {
-  it('Deve permitir compra de um produto com sucesso', () => {
+describe('Fluxo de checkout com dados dinâmicos', () => {
+  const email = `cliente_${Date.now()}@teste.com`;
+  const senha = 'SenhaForte123!';
+  const produto = 'Hoodie with Logo';
+
+  it('Deve comprar produto com dados dinâmicos', () => {
     actions.visitarLoja();
-    actions.login('usuario_teste@dominio.com','SenhaForte123!');
-    actions.adicionarProdutoAoCarrinho('Hoodie with Logo');
+    actions.login(email, senha);
+    actions.adicionarProdutoAoCarrinho(produto);
     actions.irParaCarrinho();
     actions.finalizarCompra();
     actions.validarPedidoFinalizado();

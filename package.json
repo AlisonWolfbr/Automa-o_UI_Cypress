@@ -1,10 +1,11 @@
 {
-  "name": "ebac-ui-exercicios",
+  "name": "ebac-ui-exercicios-modulo4",
   "version": "1.0.0",
-  "description": "Exercícios EBAC - Suítes de teste para Loja EBAC",
+  "description": "EBAC - Módulo 4: Testes com intercept e dados dinâmicos",
   "scripts": {
     "test:criarConta": "cypress run --spec 'cypress/integration/criarConta/**/*.spec.js'",
     "test:checkout": "cypress run --spec 'cypress/integration/checkout/**/*.spec.js'",
+    "test:intercept": "cypress run --spec 'cypress/integration/apiIntercept/**/*.spec.js'",
     "test:all": "cypress run"
   },
   "devDependencies": {
